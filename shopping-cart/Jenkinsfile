@@ -47,7 +47,7 @@ pipeline {
                     sh """
 
                         oc patch deployment security-scans \
-                        -p '{"spec": {"template": {"metadata": {"labels":{"build": "build-${BUILD_NUMBER}"}}}}}' \
+                        -p '{"spec": {"template": {"metadata": {"labels": {"build": "build-${BUILD_NUMBER}"}}}}}' \
                         -n ${APP_NAMESPACE}
 
                     """
